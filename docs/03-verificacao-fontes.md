@@ -17,3 +17,15 @@
 | 3 | Quais são os benefícios e as limitações dos testes automatizados na garantia da qualidade de software? Apresente referências confiáveis que sustentem cada benefício e limitação. | a ser preenchido | a ser preenchido |
 | 4 | O que é a cobertura de testes de software, como ela é calculada e quais são as suas limitações como métrica de qualidade? Inclua fontes que permitam verificar as definições e os cálculos apresentados. | a ser preenchido | a ser preenchido |
 | 5 | Como verificar se as respostas produzidas por um modelo de inteligência artificial são confiáveis e se as citações apresentadas realmente sustentam as afirmações? Indique métodos de verificação e fontes confiáveis. | a ser preenchido | a ser preenchido |
+
+---
+
+## 3. Cobertura de citações
+
+<p> a ser preenchido </p>
+
+---
+
+## 4. Padrões identificados
+
+<p> a ser preenchido </p>
