@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Este documento apresenta os requisitos de qualidade definidos para a avaliação do AnythingLLM, considerando o recorte de **RAG, fontes, permissões e privacidade**.
+Este documento apresenta os requisitos de qualidade definidos para a avaliação do AnythingLLM.
 
 Os requisitos têm como objetivo estabelecer critérios verificáveis para avaliar a qualidade da aplicação, permitindo posteriormente a realização de testes e a coleta de evidências.
 
