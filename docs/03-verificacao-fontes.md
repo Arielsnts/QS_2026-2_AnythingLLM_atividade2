@@ -6,8 +6,6 @@
   A verificação das fontes foi feita realizando 5 perguntas, sobre diferentes tópicos, ao AnythingLLM. Para cada pergunta, foi exigido o fornecimento da fonte, para comparar a resposta do AnythingLLM à fonte fornecida e verificar se elas realmente sustentam o que foi afirmado. Após avaliar cada verificação, foi realizado o cálculo de cobertura de citações e a identificação de padrões.
 </p>
 
----
-
 ## 2. Tabela de Verificação
 
 | **Número** | **Afirmação analisada** | **Fonte apresentada** | **Resultado da verificação**
@@ -18,8 +16,6 @@
 | 4 | O que é a cobertura de testes de software, como ela é calculada e quais são as suas limitações como métrica de qualidade? Inclua fontes que permitam verificar as definições e os cálculos apresentados. | O AnythingLLM mencionou o ISTQB, livros técnicos, Martin Fowler e a ISO/IEC 25010, sem apresentar links diretos para a maioria das referências. Na verificação complementar, foram consultados o syllabus do ISTQB, a documentação do JaCoCo, o artigo de Martin Fowler e as recomendações do Google. | Parcialmente sustentada. A definição geral, a fórmula de cobertura de ramificações e as principais limitações são corroboradas por fontes técnicas confiáveis. Contudo, a resposta simplifica a distinção entre linhas e instruções, apresenta uma fórmula limitada para cobertura de caminhos e não fornece referências precisas para todas as afirmações. |
 | 5 | Como verificar se as respostas produzidas por um modelo de inteligência artificial são confiáveis e se as citações apresentadas realmente sustentam as afirmações? Indique métodos de verificação e fontes confiáveis. | A resposta menciona Google Scholar, IEEE Xplore, ACM Digital Library, ISO, NIST e outras instituições, mas não apresenta links específicos para fundamentar cada método. | Parcialmente sustentada. As orientações gerais são coerentes com as práticas de pesquisa e verificação. As fontes institucionais consultadas confirmam a relevância da conferência independente e disponibilizam meios para localizar literatura e normas. Entretanto, algumas recomendações são generalizações, e as referências foram apresentadas sem links diretos para comprovar cada orientação. |
 
----
-
 ## 3. Cobertura de citações
 
 <p>Nas cinco respostas analisadas, observou-se que 100% mencionaram fontes, referências bibliográficas ou instituições reconhecidas. Entretanto, nenhuma apresentou links diretos para as fontes citadas originalmente, o que corresponde a uma taxa de 0% de respostas com referências diretamente acessíveis por meio de links. Apesar da presença de referências em todas as respostas, a verificação complementar indicou que elas sustentavam apenas parte do conteúdo ou apresentavam limitações de precisão e especificidade. Portanto, a presença de referências não foi suficiente para garantir que todas as afirmações estivessem devidamente fundamentadas.</p>
@@ -29,8 +25,6 @@ ref = 5/5 x 100 = 100%
 
 - <strong> Indicador 2: Respostas com links diretos nas referências originais </strong><br>
 links = 0/5 x 100 = 0%
-
----
 
 ## 4. Padrões identificados
 
