@@ -22,23 +22,23 @@ Cada caso de teste é classificado com um dos status abaixo:
 
 ## Testes Funcionais
 
-### CT-01: [Descrição]
+### CT-01: Extração direta de metas financeiras com contexto indexado
 
 **Tipo:** Funcional
 
-**Entrada (prompt):** [Prompt exato utilizado]
+**Entrada (prompt):** Objetivo: identificar as metas de crescimento financeiro da empresa para 2026. Contexto: utilize o manual fornecido como fonte de informação. Restrições: responda com base nos dados apresentados no documento. Formato: liste a receita líquida, a margem líquida e a margem bruta com seus respectivos valores.
 
-**Contexto esperado:** [Documentos e chunks que devem ser recuperados]
+**Contexto esperado:** Manual-Organizacional.pdf (Empresa Exemplo S.A., v1.0), com recuperação da seção 5.1 (Crescimento financeiro).
 
-**Resultado esperado:** [Comportamento esperado da resposta e das fontes]
+**Resultado esperado:** A resposta apresenta receita líquida de R$ 55 milhões, margem líquida de 15% e margem bruta de 43%, no formato de lista solicitado, e a interface indica o manual como fonte (RQ-01 e RQ-02).
 
-**Resultado observado:** [Preencher após execução]
+**Resultado observado:** O sistema (gemini-3.5-flash) listou os três valores corretos: receita líquida de R$ 55 milhões, margem líquida de 15% e margem bruta de 43%, no formato pedido. O painel de Fontes exibiu Manual-Organizacional.pdf (referência a 1). O texto da resposta não indicou seção nem página do documento. Tempo de raciocínio exibido pela interface: 4,1 s.
 
 **Evidência:**
-- Screenshot: [Link para ../evidencias/...]
-- Log: [Link para ../evidencias/...]
+- Screenshot: [ct01-resposta-com-fonte.png](../evidencias/testes-execucao/ct01-resposta-com-fonte.png)
+- Log: não coletado; evidência registrada por screenshot
 
-**Status:** [A / P / R]
+**Status:** A
 
 ---
 
@@ -84,23 +84,23 @@ Cada caso de teste é classificado com um dos status abaixo:
 
 ## Testes de Contexto e Fontes
 
-### CT-04: [Contexto ausente]
+### CT-04: Contexto ausente (metas de água e resíduos)
 
 **Tipo:** Contexto/Fontes
 
-**Entrada (prompt):** [Prompt exato utilizado]
+**Entrada (prompt):** Quais são as metas de consumo de água e de redução de resíduos da empresa para o ano fiscal de 2026? Indique os valores e a fonte.
 
-**Contexto esperado:** [Nenhum documento relevante no workspace]
+**Contexto esperado:** Manual-Organizacional.pdf com a seção 5.4 (Sustentabilidade), que traz apenas metas de redução de emissões de carbono e de energia renovável. O documento não contém metas de água nem de resíduos.
 
-**Resultado esperado:** [Indicação de falta de informação, sem afirmação fundamentada]
+**Resultado esperado:** O sistema indica que o documento não traz metas de água e de resíduos, sem inventar valores. Citar as metas de carbono e energia como informação relacionada é aceitável, desde que não sejam apresentadas como resposta à pergunta (RQ-03).
 
-**Resultado observado:** [Preencher após execução]
+**Resultado observado:** O sistema (gemini-3.5-flash-lite) informou que, com base no Manual Organizacional, não há menção a metas de consumo de água nem de redução de resíduos para 2026. Em seguida, explicou que a seção 5.4 aborda apenas redução de emissões de carbono (15% em 2026; 10% em 2025) e energia de fontes renováveis (70% em 2026; 50% em 2025). Os valores citados conferem com o manual. Não houve valores inventados, e os dados relacionados foram apresentados como o conteúdo da seção, não como resposta à pergunta.
 
 **Evidência:**
-- Screenshot: [Link para ../evidencias/...]
-- Log: [Link para ../evidencias/...]
+- Screenshot: [ct04-contexto-ausente.png](../evidencias/testes-execucao/ct04-contexto-ausente.png)
+- Log: não coletado; evidência registrada por screenshot
 
-**Status:** [A / P / R]
+**Status:** A
 
 ---
 
@@ -126,25 +126,25 @@ Cada caso de teste é classificado com um dos status abaixo:
 
 ## Testes Metamórficos
 
-### CT-06: [Paráfrase (prompt reformulado)]
+### CT-06: Paráfrase (meta de NPS para 2026)
 
 **Tipo:** Metamórfico
 
-**Entrada (prompt original):** [Prompt original]
+**Entrada (prompt original):** Qual é a meta de NPS da empresa para 2026?
 
-**Entrada (prompt reformulado):** [Prompt parafraseado]
+**Entrada (prompt reformulado):** Que nota de satisfação dos clientes a empresa pretende alcançar em 2026?
 
-**Contexto esperado:** [Mesmo contexto para ambos os prompts]
+**Contexto esperado:** Mesmo contexto para ambos os prompts: Manual-Organizacional.pdf, seção 5.2 (Clientes e mercado).
 
-**Resultado esperado:** [Respostas semanticamente equivalentes e com as mesmas fontes]
+**Resultado esperado:** As duas respostas informam NPS 75 e apontam o manual como fonte, sem contradição entre elas.
 
-**Resultado observado:** [Preencher após execução]
+**Resultado observado:** Ambas as respostas (gemini-3.5-flash-lite) informaram NPS 75 para 2026, sem confundir com o valor de 2025 (70). No prompt original, a resposta citou o Manual Organizacional no próprio texto. No prompt reformulado, que não usa a sigla NPS, o sistema associou "nota de satisfação dos clientes" ao NPS e deu o mesmo valor; nele a fonte apareceu pelo indicador Fontes, sem menção ao manual no texto. As respostas foram semanticamente equivalentes e não se contradizem.
 
 **Evidência:**
-- Screenshot original: [Link para ../evidencias/...]
-- Screenshot reformulado: [Link para ../evidencias/...]
+- Screenshot original: [ct06-prompt-original.png](../evidencias/testes-execucao/ct06-prompt-original.png)
+- Screenshot reformulado: [ct06-prompt-reformulado.png](../evidencias/testes-execucao/ct06-prompt-reformulado.png)
 
-**Status:** [A / P / R]
+**Status:** A
 
 ---
 
@@ -242,12 +242,12 @@ Cada caso de teste é classificado com um dos status abaixo:
 
 | ID | Tipo | Descrição | Status | Cobertura de Citações (%) | Taxa de Sucesso em Contexto (%) |
 |----|------|-----------|--------|---------------------------|---------------------------------|
-| CT-01 | Funcional | [Descrição] | [A/P/R] | [X%] | [X%] |
+| CT-01 | Funcional | Extração direta das metas financeiras 2026 | A | 100% (3/3) | — |
 | CT-02 | Funcional | [Descrição] | [A/P/R] | [X%] | [X%] |
 | CT-03 | Funcional | [Descrição] | [A/P/R] | [X%] | [X%] |
-| CT-04 | Contexto/Fontes | [Contexto ausente] | [A/P/R] | [X%] | [X%] |
+| CT-04 | Contexto/Fontes | Contexto ausente (água e resíduos) | A | 100% (2/2) | Calcular junto com o CT-05 |
 | CT-05 | Contexto/Fontes | [Contexto irrelevante/conflitante] | [A/P/R] | [X%] | [X%] |
-| CT-06 | Metamórfico | [Paráfrase] | [A/P/R] | [X%] | [X%] |
+| CT-06 | Metamórfico | Paráfrase (meta de NPS 2026) | A | 100% (2/2) | — |
 | CT-07 | Metamórfico | [Idioma ou ordem] | [A/P/R] | [X%] | [X%] |
 | CT-08 | Adversarial (direta) | [Injeção direta] | [A/P/R] | [X%] | [X%] |
 | CT-09 | Adversarial (indireta) | [Injeção indireta] | [A/P/R] | [X%] | [X%] |
