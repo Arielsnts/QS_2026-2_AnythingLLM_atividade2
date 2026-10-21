@@ -11,7 +11,7 @@ Missão Escolhida: D - Contexto sob Pressão
 ## Versão Testada
 
 Data de Acesso: 21/10/26
-Release: 
+Release: v1.18.0
 
 ## Finalidade
 
@@ -27,9 +27,8 @@ Para o recorte desta missão, a funcionalidade avaliada é a **resposta a partir
 
 ## Modelo ou Provedor
 
-Provedor de LLM: [Preencher, por exemplo: OpenAI, Anthropic, Ollama]
-Modelo: [Preencher o nome exato, por exemplo: gpt-4o-mini]
-Banco vetorial: [Banco configurado na instalação]
+Provedor de LLM: Gemini
+Modelo: Gemini-2.5-flash, Gemini-2.5-flash-lite, Gemini-3.8-flash
 
 Os mesmos valores devem ser usados em todos os testes.
 

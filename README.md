@@ -6,15 +6,14 @@ Esta é a **Atividade 2 (AV2) — Missão Contexto Confiável**, com foco na mis
 
 A análise compara o comportamento do sistema diante de contexto correto, ausente, irrelevante e conflitante, avalia diferentes versões de prompt (P1, P2 e P3), audita fontes e citações e propõe melhorias para os achados mais críticos.
 
-**Projeto Avaliado:** AnythingLLM
+**Projeto Avaliado:** AnythingLLM <br />
 **Repositório Oficial:** [Link do repositório do projeto](https://github.com/Mintplex-Labs/anything-llm)
 
 ---
 
 ## Vídeo da Atividade
 
-**URL:** [Link do vídeo publicado](video/video.md)
-**Mais informações:** [clique aqui](video/video.md)
+**URL:** [Link do vídeo publicado](video/video.md) <br />
 
 ---
 
@@ -69,7 +68,7 @@ Navegue pelas seções principais:
 
 ## Evidências
 
-- Para acessar as referências: [clique aqui](evidencias/)
+- Para acessar as evidências: [clique aqui](evidencias/)
 
 ---
 
